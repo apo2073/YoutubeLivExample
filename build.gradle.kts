@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "kr.apo2073"
-version = "1.0-SNAPSHOT"
+version = "1.1.1"
 
 repositories {
     mavenCentral()
@@ -19,6 +19,9 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+tasks.jar {
+    archiveFileName.set("YouTubeLibSample-${version}.jar")
 }
 kotlin {
     jvmToolchain(17)
