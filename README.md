@@ -3,7 +3,7 @@
 ### 🗃️Build
 __Need Java 17__
 
-`./gradle build`
+`./gradle clean shadowJar`
 __or__
 `gradlew`
 

@@ -2,6 +2,7 @@ package kr.apo2073
 
 import kr.apo2073.ytliv.YouTubeBuilder
 import java.util.Scanner
+import kotlin.system.exitProcess
 
 fun main() {
     val scanner=Scanner(System.`in`)
@@ -14,5 +15,9 @@ fun main() {
         .addListener(Listener())
         .build()
     val info=youtube.channelInfo()
+    if (info.channelName==null) {
+        println("해당 영상이 존재하지 않습니다")
+        exitProcess(1)
+    }
     println("연결됨 ${info.channelName} \n ${info.subscriptionCount}구독자")
 }
